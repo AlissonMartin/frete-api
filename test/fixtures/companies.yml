@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  federal_tax_id: MyString
+  employees: one
+  owner: one
+
+two:
+  name: MyString
+  federal_tax_id: MyString
+  employees: two
+  owner: two
