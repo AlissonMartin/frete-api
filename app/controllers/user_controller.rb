@@ -3,7 +3,7 @@ class UserController < ApplicationController
   def update
 
     if @user.update(user_params)
-      render json: {data: @user}
+      render json: @user
     else
       render json: {error: "Parametros inválidos"}, status: :bad_request
     end
@@ -11,7 +11,7 @@ class UserController < ApplicationController
   end
 
   def show
-    render json: {data: @user.as_json(only: [:id, :name, :email])}
+    render json: @user
   end
 
   private
@@ -19,5 +19,5 @@ class UserController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password)
   end
-  
+
 end
